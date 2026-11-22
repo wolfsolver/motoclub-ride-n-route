@@ -4,7 +4,7 @@
 > Bridging the gap between club logistics (like *Spond*) and the riding experience (like *Rever*).
 
 <p align="center">
-  <img src="docs/infographic-motoclub-ride-n-route_small.png" alt="MotoClub Ride&Route Infographic" width="100%" />
+  <img src="docs/infographic-motoclub-ride-n-route_en_small.png" alt="MotoClub Ride&Route Infographic" width="100%" />
 </p>
 
 ## 📖 Project Overview
