@@ -211,6 +211,75 @@
       border-radius: 20px;
     }
 
+
+    /* Live Stats Bar */
+    .motoclub-stats-section {
+      padding: 2rem 0;
+      border-top: 1px solid rgba(51, 65, 85, 0.5);
+    }
+
+    .stats-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+
+    .stats-header .sample-tag {
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      font-size: 0.72rem;
+    }
+
+    .motoclub-stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+
+
+    .stat-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.9rem;
+      padding: 1.15rem 1rem;
+      text-align: center;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .stat-item:hover {
+      border-color: rgba(245, 158, 11, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .stat-item strong {
+      display: block;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.15;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-item span {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
     /* Section Shared */
     section {
       padding: 3.5rem 0;
@@ -352,6 +421,10 @@
       .hero-cta {
         justify-content: center;
       }
+
+      .motoclub-stats {
+        grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+      }
     }
   </style>
 </head>
@@ -411,109 +484,124 @@
       </div>
     </div>
 
-    <!-- Unique Selling Proposition -->
-    <section>
-      <div class="section-header">
-        <h2>Built for the Entire Mototourism Ecosystem</h2>
-        <p>One progressive web application tailored for clubs, content creators, and everyday motorcyclists.</p>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <div class="card-icon">🛡️</div>
-          <h3>For Clubs</h3>
-          <p>
-            Complete roster &amp; membership fee management, annual renewals, digital QR membership cards, event
-            planning with automated waitlists, restaurant/hotel headcounts, merch reservations, pre-ride check-ins,
-            and audience building via Follower &amp; Public Teaser modes.
-          </p>
+    <!-- Live Platform Stats -->
+      <section class="motoclub-stats-section" aria-label="Live Platform Statistics">
+        <div class="stats-header">
+          <span>Live Platform Metrics</span>
+          <span class="sample-tag">Sample Data</span>
         </div>
+        <div class="motoclub-stats">
+          <div class="stat-item"><strong data-mc-stat="users">—</strong><span>Riders</span></div>
+          <div class="stat-item"><strong data-mc-stat="clubs">—</strong><span>Moto Clubs</span></div>
+          <div class="stat-item"><strong data-mc-stat="ambassadors">—</strong><span>Ambassadors</span></div>
+          <div class="stat-item"><strong data-mc-stat="itineraries">—</strong><span>Itineraries</span></div>
+          <div class="stat-item"><strong data-mc-stat="events">—</strong><span>Events</span></div>
+        </div>
+      </section>
 
-        <div class="card">
-          <div class="card-icon">💎</div>
-          <h3>For Ambassadors</h3>
-          <p>
-            Verified VIP showcases for motorcycle tourism professionals to publish curated itineraries, group
-            Protected GPX routes into Premium Bundles, track unique rider downloads, and grant bundle access directly
-            to their followers in a privacy-first workflow.
-          </p>
+      <!-- Unique Selling Proposition -->
+      <section>
+        <div class="section-header">
+          <h2>Built for the Entire Mototourism Ecosystem</h2>
+          <p>One progressive web application tailored for clubs, content creators, and everyday motorcyclists.</p>
         </div>
 
-        <div class="card">
-          <div class="card-icon">🏍️</div>
-          <h3>For Riders</h3>
-          <p>
-            Personal digital Garage, multi-club memberships or lightweight club following, and access to a
-            community-rated repository of GPX itineraries classified by difficulty (Rookie, Medium, Advanced,
-            Off-road) with interactive elevation profiles and maps.
-          </p>
-        </div>
-      </div>
-    </section>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>For Clubs</h3>
+            <p>
+              Complete roster &amp; membership fee management, annual renewals, digital QR membership cards, event
+              planning with automated waitlists, restaurant/hotel headcounts, merch reservations, pre-ride check-ins,
+              and audience building via Follower &amp; Public Teaser modes.
+            </p>
+          </div>
 
-    <!-- Infographic Section -->
-    <section>
-      <div class="section-header">
-        <h2>Platform Architecture &amp; Ecosystem Overview</h2>
-        <p>How MotoClub Ride&amp;Route connects Clubs, Ambassadors, and Riders in a unified experience.</p>
-      </div>
-      <div class="infographic-box">
-        <img src="./infographic-motoclub-ride-n-route-en_small.png" alt="MotoClub Ride&Route Infographic" />
-      </div>
-    </section>
+          <div class="card">
+            <div class="card-icon">💎</div>
+            <h3>For Ambassadors</h3>
+            <p>
+              Verified VIP showcases for motorcycle tourism professionals to publish curated itineraries, group
+              Protected GPX routes into Premium Bundles, track unique rider downloads, and grant bundle access directly
+              to their followers in a privacy-first workflow.
+            </p>
+          </div>
 
-    <!-- Core Features & Tech Stack -->
-    <section>
-      <div class="section-header">
-        <h2>Core Capabilities &amp; Technology</h2>
-        <p>Engineered as an offline-capable Progressive Web App with strict database-level RBAC security.</p>
-      </div>
+          <div class="card">
+            <div class="card-icon">🏍️</div>
+            <h3>For Riders</h3>
+            <p>
+              Personal digital Garage, multi-club memberships or lightweight club following, and access to a
+              community-rated repository of GPX itineraries classified by difficulty (Rookie, Medium, Advanced,
+              Off-road) with interactive elevation profiles and maps.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <div class="features-grid">
-        <div class="feature-item">
-          <h4>1. Multi-Tenant Club Environments</h4>
-          <p>
-            Independent spaces for clubs with custom branding, public/private visibility, mono-brand restriction
-            support, and opt-in public teasers.
-          </p>
+      <!-- Infographic Section -->
+      <section>
+        <div class="section-header">
+          <h2>Platform Architecture &amp; Ecosystem Overview</h2>
+          <p>How MotoClub Ride&amp;Route connects Clubs, Ambassadors, and Riders in a unified experience.</p>
         </div>
-        <div class="feature-item">
-          <h4>2. Member &amp; QR Verification</h4>
-          <p>
-            Manage Followers, active Members, and Coordinators with ephemeral 30-second QR codes for live membership
-            and event check-in verification.
-          </p>
+        <div class="infographic-box">
+          <img src="./infographic-motoclub-ride-n-route-en_small.png" alt="MotoClub Ride&Route Infographic" />
         </div>
-        <div class="feature-item">
-          <h4>3. Granular Event Logistics</h4>
-          <p>
-            Day trips and multi-day tours with capacity limits, automatic waitlist promotion, and RSVP options for
-            pillion riders, lunch, and overnight stays.
-          </p>
+      </section>
+
+      <!-- Core Features & Tech Stack -->
+      <section>
+        <div class="section-header">
+          <h2>Core Capabilities &amp; Technology</h2>
+          <p>Engineered as an offline-capable Progressive Web App with strict database-level RBAC security.</p>
         </div>
-        <div class="feature-item">
-          <h4>4. Protected GPX &amp; Premium Bundles</h4>
-          <p>
-            Token-protected GPX downloads (`Private`, `Club`, `Public`, and `Premium` scopes), Ambassador bundle
-            management, and community reviews.
-          </p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <h4>1. Multi-Tenant Club Environments</h4>
+            <p>
+              Independent spaces for clubs with custom branding, public/private visibility, mono-brand restriction
+              support, and opt-in public teasers.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h4>2. Member &amp; QR Verification</h4>
+            <p>
+              Manage Followers, active Members, and Coordinators with ephemeral 30-second QR codes for live membership
+              and event check-in verification.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h4>3. Granular Event Logistics</h4>
+            <p>
+              Day trips and multi-day tours with capacity limits, automatic waitlist promotion, and RSVP options for
+              pillion riders, lunch, and overnight stays.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h4>4. Protected GPX &amp; Premium Bundles</h4>
+            <p>
+              Token-protected GPX downloads (`Private`, `Club`, `Public`, and `Premium` scopes), Ambassador bundle
+              management, and community reviews.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h4>5. Club Merchandising</h4>
+            <p>
+              Reserve-now, pickup-later catalog for club apparel and gadgets, integrated with event check-ins for
+              seamless distribution.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h4>6. Verified RBAC Security</h4>
+            <p>
+              Nearly 400 automated Cucumber BDD security scenarios validating PocketBase collection rules, privacy
+              isolation, and role permissions.
+            </p>
+          </div>
         </div>
-        <div class="feature-item">
-          <h4>5. Club Merchandising</h4>
-          <p>
-            Reserve-now, pickup-later catalog for club apparel and gadgets, integrated with event check-ins for
-            seamless distribution.
-          </p>
-        </div>
-        <div class="feature-item">
-          <h4>6. Verified RBAC Security</h4>
-          <p>
-            Nearly 400 automated Cucumber BDD security scenarios validating PocketBase collection rules, privacy
-            isolation, and role permissions.
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
   </main>
 
   <!-- Footer -->
@@ -530,6 +618,26 @@
       <p>MotoClub Ride&amp;Route &mdash; Built for Motorcycle Clubs, Ambassadors, and Riders.</p>
     </div>
   </footer>
+
+  <script>
+    (async function loadMotoClubStats() {
+      const API_URL = 'https://motoclub.prudenzano.org/api/public/stats';
+      try {
+        const res = await fetch(API_URL, { method: 'GET' });
+        if (!res.ok) return;
+        const stats = await res.json();
+        for (const key of ['users', 'clubs', 'ambassadors', 'itineraries', 'events']) {
+          if (typeof stats[key] === 'number') {
+            document.querySelectorAll(`[data-mc-stat="${key}"]`).forEach((el) => {
+              el.textContent = stats[key].toLocaleString('en-US');
+            });
+          }
+        }
+      } catch (err) {
+        console.warn('Unable to load MotoClub statistics:', err);
+      }
+    })();
+  </script>
 </body>
 
 </html>
