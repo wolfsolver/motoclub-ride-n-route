@@ -211,72 +211,6 @@
       border-radius: 20px;
     }
 
-    /* Live Stats Bar */
-    .motoclub-stats-section {
-      padding: 2rem 0;
-      border-top: 1px solid rgba(51, 65, 85, 0.5);
-    }
-
-    .stats-header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      margin-bottom: 1rem;
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-    }
-
-    .stats-header .sample-tag {
-      padding: 0.15rem 0.55rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      font-size: 0.72rem;
-    }
-
-    .motoclub-stats {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1rem;
-    }
-
-    .stat-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 0.9rem;
-      padding: 1.15rem 1rem;
-      text-align: center;
-      transition: border-color 0.15s ease, transform 0.15s ease;
-    }
-
-    .stat-item:hover {
-      border-color: rgba(245, 158, 11, 0.45);
-      transform: translateY(-2px);
-    }
-
-    .stat-item strong {
-      display: block;
-      font-size: 1.85rem;
-      font-weight: 800;
-      color: var(--accent);
-      line-height: 1.15;
-      margin-bottom: 0.25rem;
-      letter-spacing: -0.02em;
-    }
-
-    .stat-item span {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
     /* Section Shared */
     section {
       padding: 3.5rem 0;
@@ -399,10 +333,6 @@
       .hero-cta {
         justify-content: center;
       }
-
-      .motoclub-stats {
-        grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-      }
     }
   </style>
 </head>
@@ -419,8 +349,14 @@
         </div>
       </a>
       <div class="nav-actions">
-        <a href="./index.html" class="btn btn-outline">
+        <a href="./user_manual-it.html" class="btn btn-outline">
+          Manuale Utente
+        </a>
+        <a href="./index-en.html" class="btn btn-outline">
           [English]
+        </a>
+        <a href="https://motoclub.prudenzano.org/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Apri App &rarr;
         </a>
       </div>
     </div>
@@ -450,7 +386,7 @@
           </a>
           <a href="https://github.com/wolfsolver/motoclub-ride-n-route" target="_blank" rel="noopener noreferrer"
             class="btn btn-outline">
-            Codice Sorgente su GitHub
+            Repo GitHub
           </a>
         </div>
       </div>
@@ -462,127 +398,109 @@
       </div>
     </div>
 
-    <!-- Live Platform Stats -->
-      <section class="motoclub-stats-section" aria-label="Statistiche Piattaforma in Tempo Reale">
-        <div class="stats-header">
-          <span>Statistiche Piattaforma Live</span>
-          <span class="sample-tag">Sample Data / Dati Dimostrativi</span>
-        </div>
-        <div class="motoclub-stats">
-          <div class="stat-item"><strong data-mc-stat="users">—</strong><span>Rider</span></div>
-          <div class="stat-item"><strong data-mc-stat="clubs">—</strong><span>Moto Club</span></div>
-          <div class="stat-item"><strong data-mc-stat="ambassadors">—</strong><span>Ambassador</span></div>
-          <div class="stat-item"><strong data-mc-stat="itineraries">—</strong><span>Itinerari</span></div>
-          <div class="stat-item"><strong data-mc-stat="events">—</strong><span>Eventi</span></div>
-        </div>
-      </section>
+    <!-- Unique Selling Proposition -->
+    <section>
+      <div class="section-header">
+        <h2>Progettata per Tutto l'Ecosistema Mototuristico</h2>
+        <p>Un'unica Progressive Web App pensata per organizzatori di club, content creator e motociclisti.</p>
+      </div>
 
-      <!-- Unique Selling Proposition -->
-      <section>
-        <div class="section-header">
-          <h2>Progettata per Tutto l'Ecosistema Mototuristico</h2>
-          <p>Un'unica Progressive Web App pensata per organizzatori di club, content creator e motociclisti.</p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3>Per i MotoClub</h3>
+          <p>
+            Gestione completa di soci e quote associative, rinnovi annuali, tessera digitale con QR code, pianificazione
+            eventi con liste d'attesa automatiche, conteggio posti ristorante/hotel, prenotazione merchandising,
+            check-in pre-uscita e crescita della community tramite modalità Follower e Teaser Pubblici.
+          </p>
         </div>
 
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-icon">🛡️</div>
-            <h3>Per i MotoClub</h3>
-            <p>
-              Gestione completa di soci e quote associative, rinnovi annuali, tessera digitale con QR code,
-              pianificazione
-              eventi con liste d'attesa automatiche, conteggio posti ristorante/hotel, prenotazione merchandising,
-              check-in pre-uscita e crescita della community tramite modalità Follower e Teaser Pubblici.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">💎</div>
-            <h3>Per gli Ambassador</h3>
-            <p>
-              Vetrine VIP verificate per professionisti del mototurismo per pubblicare itinerari curati, raggruppare
-              tracce GPX protette in Bundle Premium, monitorare i download per utente e abilitare direttamente i propri
-              follower nel pieno rispetto della privacy.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">🏍️</div>
-            <h3>Per i Rider</h3>
-            <p>
-              Garage digitale personale, iscrizione a più club o semplice follow, e accesso a un catalogo di itinerari
-              GPX
-              votati dalla community e classificati per difficoltà (Rookie, Medium, Advanced, Off-road) con mappe e
-              profili altimetrici interattivi.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Infographic Section -->
-      <section>
-        <div class="section-header">
-          <h2>Architettura ed Ecosistema della Piattaforma</h2>
-          <p>Come MotoClub Ride&amp;Route connette MotoClub, Ambassador e Rider in un'esperienza unificata.</p>
-        </div>
-        <div class="infographic-box">
-          <img src="./infographic-motoclub-ride-n-route_small.png" alt="Infografica MotoClub Ride&Route" />
-        </div>
-      </section>
-
-      <!-- Core Features & Tech Stack -->
-      <section>
-        <div class="section-header">
-          <h2>Funzionalità Principali e Tecnologia</h2>
-          <p>Sviluppata come Progressive Web App offline-first con sicurezza RBAC verificata a livello database.</p>
+        <div class="card">
+          <div class="card-icon">💎</div>
+          <h3>Per gli Ambassador</h3>
+          <p>
+            Vetrine VIP verificate per professionisti del mototurismo per pubblicare itinerari curati, raggruppare
+            tracce GPX protette in Bundle Premium, monitorare i download per utente e abilitare direttamente i propri
+            follower nel pieno rispetto della privacy.
+          </p>
         </div>
 
-        <div class="features-grid">
-          <div class="feature-item">
-            <h4>1. Ambienti Club Multi-Tenant</h4>
-            <p>
-              Spazi indipendenti per ogni club con branding personalizzato, visibilità pubblica/privata, supporto a club
-              monomarca e teaser pubblici opzionali.
-            </p>
-          </div>
-          <div class="feature-item">
-            <h4>2. Gestione Soci e Verifica QR</h4>
-            <p>
-              Gestione di Follower, Soci attivi e Coordinatori con codici QR effimeri (30 secondi) per la verifica in
-              tempo reale della tessera e il check-in agli eventi.
-            </p>
-          </div>
-          <div class="feature-item">
-            <h4>3. Logistica Eventi Avanzata</h4>
-            <p>
-              Uscite giornaliere e tour multi-giorno con limiti di capienza, promozione automatica dalla waitlist e
-              opzioni RSVP per passeggero, pranzo e pernottamento.
-            </p>
-          </div>
-          <div class="feature-item">
-            <h4>4. GPX Protetti e Bundle Premium</h4>
-            <p>
-              Download GPX protetti da token (`Private`, `Club`, `Public` e `Premium`), gestione Bundle per gli
-              Ambassador
-              e recensioni certificate della community.
-            </p>
-          </div>
-          <div class="feature-item">
-            <h4>5. Merchandising di Club</h4>
-            <p>
-              Catalogo "prenota ora e ritira all'evento" per abbigliamento e gadget del club, integrato con il check-in
-              degli eventi per una distribuzione immediata.
-            </p>
-          </div>
-          <div class="feature-item">
-            <h4>6. Sicurezza RBAC Certificata</h4>
-            <p>
-              Quasi 400 scenari automatici di sicurezza Cucumber BDD che validano le regole delle collezioni PocketBase,
-              l'isolamento della privacy e i permessi per ruolo.
-            </p>
-          </div>
+        <div class="card">
+          <div class="card-icon">🏍️</div>
+          <h3>Per i Rider</h3>
+          <p>
+            Garage digitale personale, iscrizione a più club o semplice follow, e accesso a un catalogo di itinerari GPX
+            votati dalla community e classificati per difficoltà (Rookie, Medium, Advanced, Off-road) con mappe e
+            profili altimetrici interattivi.
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
+
+    <!-- Infographic Section -->
+    <section>
+      <div class="section-header">
+        <h2>Architettura ed Ecosistema della Piattaforma</h2>
+        <p>Come MotoClub Ride&amp;Route connette MotoClub, Ambassador e Rider in un'esperienza unificata.</p>
+      </div>
+      <div class="infographic-box">
+        <img src="./infographic-motoclub-ride-n-route-small-it.png" alt="Infografica MotoClub Ride&Route" />
+      </div>
+    </section>
+
+    <!-- Core Features & Tech Stack -->
+    <section>
+      <div class="section-header">
+        <h2>Funzionalità Principali e Tecnologia</h2>
+        <p>Sviluppata come Progressive Web App offline-first con sicurezza RBAC verificata a livello database.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <h4>1. Ambienti Club Multi-Tenant</h4>
+          <p>
+            Spazi indipendenti per ogni club con branding personalizzato, visibilità pubblica/privata, supporto a club
+            monomarca e teaser pubblici opzionali.
+          </p>
+        </div>
+        <div class="feature-item">
+          <h4>2. Gestione Soci e Verifica QR</h4>
+          <p>
+            Gestione di Follower, Soci attivi e Coordinatori con codici QR effimeri (30 secondi) per la verifica in
+            tempo reale della tessera e il check-in agli eventi.
+          </p>
+        </div>
+        <div class="feature-item">
+          <h4>3. Logistica Eventi Avanzata</h4>
+          <p>
+            Uscite giornaliere e tour multi-giorno con limiti di capienza, promozione automatica dalla waitlist e
+            opzioni RSVP per passeggero, pranzo e pernottamento.
+          </p>
+        </div>
+        <div class="feature-item">
+          <h4>4. GPX Protetti e Bundle Premium</h4>
+          <p>
+            Download GPX protetti da token (`Private`, `Club`, `Public` e `Premium`), gestione Bundle per gli Ambassador
+            e recensioni certificate della community.
+          </p>
+        </div>
+        <div class="feature-item">
+          <h4>5. Merchandising di Club</h4>
+          <p>
+            Catalogo "prenota ora e ritira all'evento" per abbigliamento e gadget del club, integrato con il check-in
+            degli eventi per una distribuzione immediata.
+          </p>
+        </div>
+        <div class="feature-item">
+          <h4>6. Sicurezza RBAC Certificata</h4>
+          <p>
+            Quasi 400 scenari automatici di sicurezza Cucumber BDD che validano le regole delle collezioni PocketBase,
+            l'isolamento della privacy e i permessi per ruolo.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -593,32 +511,12 @@
           App Live (motoclub.prudenzano.org)
         </a>
         <a href="https://github.com/wolfsolver/motoclub-ride-n-route" target="_blank" rel="noopener noreferrer">
-          Repository GitHub
+          Repo GitHub
         </a>
       </div>
       <p>MotoClub Ride&amp;Route &mdash; Pensata per MotoClub, Ambassador e Motociclisti.</p>
     </div>
   </footer>
-
-  <script>
-    (async function loadMotoClubStats() {
-      const API_URL = 'https://motoclub.prudenzano.org/api/public/stats';
-      try {
-        const res = await fetch(API_URL, { method: 'GET' });
-        if (!res.ok) return;
-        const stats = await res.json();
-        for (const key of ['users', 'clubs', 'ambassadors', 'itineraries', 'events']) {
-          if (typeof stats[key] === 'number') {
-            document.querySelectorAll(`[data-mc-stat="${key}"]`).forEach((el) => {
-              el.textContent = stats[key].toLocaleString('it-IT');
-            });
-          }
-        }
-      } catch (err) {
-        console.warn('Impossibile caricare le statistiche MotoClub:', err);
-      }
-    })();
-  </script>
 </body>
 
 </html>
